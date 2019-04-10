@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductMetaInfo renders correctly 1`] = `
+Array [
+  <Text
+    style={
+      Object {
+        "fontSize": 14,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Google Hacks
+  </Text>,
+  <Text
+    style={
+      Object {
+        "color": "green",
+        "fontSize": 12,
+      }
+    }
+  />,
+  <Text
+    style={
+      Object {
+        "color": "#333",
+        "fontSize": 11,
+      }
+    }
+  >
+    Tara Calishain
+     - 
+    2003
+  </Text>,
+  <View
+    pointerEvents="auto"
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginBottom": 5,
+        "marginTop": 5,
+        "width": "30%",
+      }
+    }
+  >
+    <View
+      style={Object {}}
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text />
+      </View>
+    </View>
+    <View
+      style={Object {}}
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text />
+      </View>
+    </View>
+    <View
+      style={Object {}}
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text />
+      </View>
+    </View>
+    <View
+      style={Object {}}
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text />
+      </View>
+    </View>
+    <View
+      style={Object {}}
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text />
+      </View>
+    </View>
+  </View>,
+  <Text
+    style={
+      Object {
+        "color": "green",
+        "fontSize": 14,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    <Text
+      accessibilityLabel=""
+      accessible={true}
+      adjustsFontSizeToFit={false}
+      allowFontScaling={true}
+      style={null}
+    >
+      £18.99
+    </Text>
+  </Text>,
+]
+`;

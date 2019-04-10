@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductListEmptyComponent renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": 1067.2,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text>
+    Nothing to list yet!
+  </Text>
+</View>
+`;

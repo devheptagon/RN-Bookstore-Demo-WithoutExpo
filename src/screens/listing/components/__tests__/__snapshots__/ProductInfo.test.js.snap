@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductInfo renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "row",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "column",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "column",
+          "justifyContent": "center",
+          "padding": 5,
+        }
+      }
+    >
+      <Image
+        source={
+          Object {
+            "uri": "http://books.google.com/books/content?id=GqTwl7-WZtUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "borderColor": "#eee",
+              "borderWidth": 2,
+            },
+            Object {
+              "height": "100%",
+              "width": "100%",
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 3,
+        "flexDirection": "column",
+        "padding": 10,
+      }
+    }
+  />
+</View>
+`;

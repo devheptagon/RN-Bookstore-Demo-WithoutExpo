@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NumericInput renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "height": 100,
+      "paddingBottom": 4,
+      "paddingTop": 4,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "flexDirection": "column",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "opacity": 1,
+          "width": 32,
+        }
+      }
+    >
+      <Text />
+    </View>
+    <Text
+      style={
+        Object {
+          "color": "green",
+          "fontSize": 20,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      0
+    </Text>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "opacity": 1,
+          "width": 32,
+        }
+      }
+    >
+      <Text />
+    </View>
+  </View>
+</View>
+`;

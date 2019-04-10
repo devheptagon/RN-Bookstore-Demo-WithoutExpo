@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductImage renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "flexDirection": "column",
+      "justifyContent": "center",
+      "padding": 5,
+    }
+  }
+>
+  <Image
+    source={1}
+    style={
+      Array [
+        Object {
+          "borderColor": "#eee",
+          "borderWidth": 2,
+        },
+        Object {
+          "height": "100%",
+          "width": "100%",
+        },
+      ]
+    }
+  />
+</View>
+`;
