@@ -1,6 +1,6 @@
-import React from 'react'
-import { StyleSheet, Text } from 'react-native'
-import Focusable from './hoc/Focusable'
+import React from "react";
+import { StyleSheet, Text } from "react-native";
+import Focusable from "./hoc/Focusable";
 
 export class AccountScreen extends React.Component {
   static navigationOptions = {
@@ -16,4 +16,4 @@ export class AccountScreen extends React.Component {
   }
 }
 
-export default AccountScreen
+export default AccountScreen;

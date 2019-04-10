@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Focusable from '../hoc/Focusable'
-import ProductInfo from '../listing/components/ProductInfo'
+import React from "react";
+import PropTypes from "prop-types";
+import Focusable from "../hoc/Focusable";
+import ProductInfo from "../listing/components/ProductInfo";
 
 export class ProductDetailScreen extends React.Component {
   static navigationOptions = {
@@ -10,7 +10,7 @@ export class ProductDetailScreen extends React.Component {
 
   render() {
     const { navigation } = this.props;
-    const data = navigation.getParam('data', {});
+    const data = navigation.getParam("data", {});
     return (
       <Focusable>
         <ProductInfo dataItem={data} isDetailed={true} />
@@ -19,8 +19,8 @@ export class ProductDetailScreen extends React.Component {
   }
 }
 
-ProductDetailScreen.propTypes = {  
-  navigation: PropTypes.object  
-}
+ProductDetailScreen.propTypes = {
+  navigation: PropTypes.object
+};
 
-export default ProductDetailScreen
+export default ProductDetailScreen;

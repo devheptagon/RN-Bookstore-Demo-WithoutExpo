@@ -1,66 +1,68 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Text, StyleSheet } from 'react-native'
-import Rating from '../../components/Rating'
-import { formatMoney } from '../../../utils/helper'
-import Theme from '../../../constants/Theme'
+import React from "react";
+import PropTypes from "prop-types";
+import { Text, StyleSheet } from "react-native";
+import Rating from "../../components/Rating";
+import { formatMoney } from "../../../utils/helper";
+import Theme from "../../../constants/Theme";
 
-export const ProductMetaInfo = (props) => {
-    const { volumeInfo, saleInfo, description, isbn } = props.dataItem
-    const { title, subtitle, authors, publishedDate, averageRating } = volumeInfo
-    const { listPrice } = saleInfo
-    const amount = listPrice ? listPrice.amount : 1
+export const ProductMetaInfo = props => {
+  const { volumeInfo, saleInfo, description, isbn } = props.dataItem;
+  const { title, subtitle, authors, publishedDate, averageRating } = volumeInfo;
+  const { listPrice } = saleInfo;
+  const amount = listPrice ? listPrice.amount : 1;
 
-    return <React.Fragment>
-        <Text style={styles.Title}>{title}</Text>
-        <Text style={styles.Subtitle}>{subtitle}</Text>
-        <Text style={styles.Author}>{authors && authors[0]} - {publishedDate}</Text>
-        { 
-            props.isDetailed && (
-                <React.Fragment>
-                    <Text style={styles.Description}>{description}</Text>
-                    <Text style={styles.Isbn}>{isbn && isbn.type + ': ' + isbn.identifier}</Text>
-                </React.Fragment>
-            )
-        }            
-        <Rating value={averageRating} />
-        <Text style={styles.Amount}>
-            { formatMoney(amount) }
-        </Text>
+  return (
+    <React.Fragment>
+      <Text style={styles.Title}>{title}</Text>
+      <Text style={styles.Subtitle}>{subtitle}</Text>
+      <Text style={styles.Author}>
+        {authors && authors[0]} - {publishedDate}
+      </Text>
+      {props.isDetailed && (
+        <React.Fragment>
+          <Text style={styles.Description}>{description}</Text>
+          <Text style={styles.Isbn}>
+            {isbn && isbn.type + ": " + isbn.identifier}
+          </Text>
+        </React.Fragment>
+      )}
+      <Rating value={averageRating} />
+      <Text style={styles.Amount}>{formatMoney(amount)}</Text>
     </React.Fragment>
-}
+  );
+};
 
 const styles = StyleSheet.create({
-    Title: {
-        fontSize: Theme.General.Text.FontBig,
-        fontWeight: Theme.General.Text.FontBold
-    },
-    Subtitle: {
-        fontSize: Theme.General.Text.FontRegular,
-        color: Theme.ProductList.Item.AlternateTextColor1
-    },
-    Author: {
-        fontSize: Theme.General.Text.FontSmall,
-        color: Theme.ProductList.Item.AlternateTextColor2
-    },
-    Amount: {
-        fontSize: Theme.General.Text.FontBig,
-        fontWeight: Theme.General.Text.FontBold,
-        color: Theme.General.Text.AmountColor
-    },
-    Description: {
-        fontSize: Theme.General.Text.FontSmall
-    },
-    Isbn: {
-        fontWeight: Theme.General.Text.FontBold
-    }
-})
+  Title: {
+    fontSize: Theme.General.Text.FontBig,
+    fontWeight: Theme.General.Text.FontBold
+  },
+  Subtitle: {
+    fontSize: Theme.General.Text.FontRegular,
+    color: Theme.ProductList.Item.AlternateTextColor1
+  },
+  Author: {
+    fontSize: Theme.General.Text.FontSmall,
+    color: Theme.ProductList.Item.AlternateTextColor2
+  },
+  Amount: {
+    fontSize: Theme.General.Text.FontBig,
+    fontWeight: Theme.General.Text.FontBold,
+    color: Theme.General.Text.AmountColor
+  },
+  Description: {
+    fontSize: Theme.General.Text.FontSmall
+  },
+  Isbn: {
+    fontWeight: Theme.General.Text.FontBold
+  }
+});
 
-ProductMetaInfo.propTypes = {  
-    volumeInfo: PropTypes.object, 
-    saleInfo: PropTypes.object, 
-    description: PropTypes.string, 
-    isbn: PropTypes.object
-}
+ProductMetaInfo.propTypes = {
+  volumeInfo: PropTypes.object,
+  saleInfo: PropTypes.object,
+  description: PropTypes.string,
+  isbn: PropTypes.object
+};
 
-export default ProductMetaInfo
+export default ProductMetaInfo;

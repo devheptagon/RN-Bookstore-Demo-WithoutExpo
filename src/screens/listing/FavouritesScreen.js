@@ -1,6 +1,6 @@
-import React from 'react'
-import { View, StyleSheet, Text } from 'react-native'
-import Focusable from '../hoc/Focusable'
+import React from "react";
+import { View, StyleSheet, Text } from "react-native";
+import Focusable from "../hoc/Focusable";
 
 export class FavouritesScreen extends React.Component {
   static navigationOptions = {
@@ -12,8 +12,8 @@ export class FavouritesScreen extends React.Component {
       <Focusable>
         <Text>Favourites page not implemented yet!</Text>
       </Focusable>
-    )
+    );
   }
 }
 
-export default FavouritesScreen
+export default FavouritesScreen;

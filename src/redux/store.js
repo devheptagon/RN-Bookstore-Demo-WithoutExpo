@@ -1,10 +1,9 @@
-import { createStore } from 'redux'
+import { createStore } from "redux";
 
-export let store = null
+export let store = null;
 
-export default (rootReducer) => {
-  if(!store)
-    store = createStore(rootReducer)
+export default rootReducer => {
+  if (!store) store = createStore(rootReducer);
 
-  return store
-}
+  return store;
+};

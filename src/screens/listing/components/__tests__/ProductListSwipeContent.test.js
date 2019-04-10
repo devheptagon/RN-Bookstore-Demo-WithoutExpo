@@ -1,8 +1,8 @@
-import React from 'react';
-import {ProductListSwipeContent} from '../ProductListSwipeContent';
-import renderer from 'react-test-renderer';
+import React from "react";
+import { ProductListSwipeContent } from "../ProductListSwipeContent";
+import renderer from "react-test-renderer";
 
-test('ProductListSwipeContent renders correctly', () => {
+test("ProductListSwipeContent renders correctly", () => {
   const tree = renderer.create(<ProductListSwipeContent />).toJSON();
   expect(tree).toMatchSnapshot();
 });

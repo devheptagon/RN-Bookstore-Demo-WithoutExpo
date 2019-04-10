@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import { NavigationEvents } from 'react-navigation'
-import { setPageTitleAction } from '../../redux/appActions'
+import React from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { NavigationEvents } from "react-navigation";
+import { setPageTitleAction } from "../../redux/appActions";
 
 export class Focusable extends React.Component {
   static navigationOptions = {
@@ -10,7 +10,7 @@ export class Focusable extends React.Component {
   };
 
   render() {
-    const { setPageTitle } = this.props
+    const { setPageTitle } = this.props;
     return (
       <React.Fragment>
         <NavigationEvents
@@ -18,12 +18,15 @@ export class Focusable extends React.Component {
         />
         {this.props.children}
       </React.Fragment>
-    )
+    );
   }
 }
 
-const mapDispatchToProps = ({
+const mapDispatchToProps = {
   setPageTitle: setPageTitleAction
-})
+};
 
-export default connect(null, mapDispatchToProps)(Focusable)
+export default connect(
+  null,
+  mapDispatchToProps
+)(Focusable);

@@ -1,8 +1,8 @@
 import React from "react";
-import { Text, StyleSheet } from "react-native";
+import { View, StyleSheet, Text } from "react-native";
 import Focusable from "./hoc/Focusable";
 
-export class SettingsScreen extends React.Component {
+export class AddressScreen extends React.Component {
   static navigationOptions = {
     header: null
   };
@@ -10,10 +10,10 @@ export class SettingsScreen extends React.Component {
   render() {
     return (
       <Focusable>
-        <Text>Settings page not implemented yet!</Text>
+        <Text>Address page not implemented yet!</Text>
       </Focusable>
     );
   }
 }
 
-export default SettingsScreen;
+export default AddressScreen;
