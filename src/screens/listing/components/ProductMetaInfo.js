@@ -10,15 +10,19 @@ export const ProductMetaInfo = props => {
   const { title, subtitle, authors, publishedDate, averageRating } = volumeInfo;
   const { listPrice } = saleInfo;
   const amount = listPrice ? listPrice.amount : 1;
-
+  const { isDetailed } = props;
   return (
     <React.Fragment>
-      <Text style={styles.Title}>{title}</Text>
-      <Text style={styles.Subtitle}>{subtitle}</Text>
-      <Text style={styles.Author}>
+      <Text numberOfLines={isDetailed ? 5 : 1} style={styles.Title}>
+        {title}
+      </Text>
+      <Text numberOfLines={isDetailed ? 5 : 1} style={styles.Subtitle}>
+        {subtitle}
+      </Text>
+      <Text numberOfLines={isDetailed ? 5 : 1} style={styles.Author}>
         {authors && authors[0]} - {publishedDate}
       </Text>
-      {props.isDetailed && (
+      {isDetailed && (
         <React.Fragment>
           <Text style={styles.Description}>{description}</Text>
           <Text style={styles.Isbn}>

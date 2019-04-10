@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import { Platform } from "react-native";
 import { SwipeListView } from "react-native-swipe-list-view";
 import FlexView from "../../components/FlexView";
 import Toaster from "../../components/Toaster";
@@ -125,6 +126,7 @@ export class ProductList extends React.Component {
     } = this.props;
     const toasterHandlers = this.buildToasterHandlers();
     const swipeButtonCount = Object.keys(toasterHandlers).length;
+
     return (
       <FlexView>
         {this.renderToasters()}
@@ -156,7 +158,7 @@ export class ProductList extends React.Component {
               {...toasterHandlers}
             />
           )}
-          recalculateHiddenLayout={true}
+          recalculateHiddenLayout={false}
           leftOpenValue={0}
           rightOpenValue={swipeButtonCount * -75}
           stopRightSwipe={swipeButtonCount * -75}
@@ -166,6 +168,7 @@ export class ProductList extends React.Component {
           disableRightSwipe={true}
           closeOnRowPress={true}
           closeOnRowBeginSwipe={true}
+          initialListSize={6}
         />
 
         <Loading isVisible={isLoading} />

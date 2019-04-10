@@ -11,65 +11,67 @@ import {
 import Theme from "../../../constants/Theme";
 import Texts from "../../../constants/Texts";
 
-export const ProductListSwipeContent = props => {
-  const {
-    listingType,
-    addToBasket,
-    showFavouriteToaster,
-    showUnFavouriteToaster
-  } = props;
-  const { SearchResults, Favourites } = ProductListingTypes;
-  const {
-    Swipe: {
-      ContainerBackgroundColor,
-      Button1BackgroundColor,
-      Button1IconColor,
-      Button2BackgroundColor,
-      Button2IconColor,
-      Button3BackgroundColor,
-      Button3IconColor
-    }
-  } = Theme;
-  return (
-    <FlexView
-      style={{
-        backgroundColor: ContainerBackgroundColor,
-        justifyContent: FlexAlign.FlexStart,
-        alignItems: FlexAlign.FlexEnd
-      }}
-    >
+export class ProductListSwipeContent extends React.PureComponent {
+  render() {
+    const {
+      listingType,
+      addToBasket,
+      showFavouriteToaster,
+      showUnFavouriteToaster
+    } = this.props;
+    const { SearchResults, Favourites } = ProductListingTypes;
+    const {
+      Swipe: {
+        ContainerBackgroundColor,
+        Button1BackgroundColor,
+        Button1IconColor,
+        Button2BackgroundColor,
+        Button2IconColor,
+        Button3BackgroundColor,
+        Button3IconColor
+      }
+    } = Theme;
+    return (
       <FlexView
-        flexDirection={FlexDirections.Row}
-        alignItems={FlexAlign.Center}
+        style={{
+          backgroundColor: ContainerBackgroundColor,
+          justifyContent: FlexAlign.FlexStart,
+          alignItems: FlexAlign.FlexEnd
+        }}
       >
-        <SwipeButton
-          isVisible={listingType === SearchResults}
-          onPress={addToBasket}
-          backgroundColor={Button1BackgroundColor}
-          text={Texts.Buy}
-          icon={IconNames.BasketAdd}
-          iconColor={Button1IconColor}
-        />
-        <SwipeButton
-          isVisible={listingType === SearchResults}
-          onPress={showFavouriteToaster}
-          backgroundColor={Button2BackgroundColor}
-          text={Texts.Fav}
-          icon={IconNames.Fav}
-          iconColor={Button2IconColor}
-        />
-        <SwipeButton
-          isVisible={listingType === Favourites}
-          onPress={showUnFavouriteToaster}
-          backgroundColor={Button3BackgroundColor}
-          text={Texts.Unfav}
-          icon={IconNames.Unfav}
-          iconColor={Button3IconColor}
-        />
+        <FlexView
+          flexDirection={FlexDirections.Row}
+          alignItems={FlexAlign.Center}
+        >
+          <SwipeButton
+            isVisible={listingType === SearchResults}
+            onPress={addToBasket}
+            backgroundColor={Button1BackgroundColor}
+            text={Texts.Buy}
+            icon={IconNames.BasketAdd}
+            iconColor={Button1IconColor}
+          />
+          <SwipeButton
+            isVisible={listingType === SearchResults}
+            onPress={showFavouriteToaster}
+            backgroundColor={Button2BackgroundColor}
+            text={Texts.Fav}
+            icon={IconNames.Fav}
+            iconColor={Button2IconColor}
+          />
+          <SwipeButton
+            isVisible={listingType === Favourites}
+            onPress={showUnFavouriteToaster}
+            backgroundColor={Button3BackgroundColor}
+            text={Texts.Unfav}
+            icon={IconNames.Unfav}
+            iconColor={Button3IconColor}
+          />
+        </FlexView>
       </FlexView>
-    </FlexView>
-  );
-};
+    );
+  }
+}
 
 ProductListSwipeContent.propTypes = {
   addToBasket: PropTypes.func,

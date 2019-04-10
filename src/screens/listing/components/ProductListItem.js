@@ -19,6 +19,7 @@ export class ProductListItem extends React.PureComponent {
 
 const styles = StyleSheet.create({
   Wrapper: {
+    height: 120,
     borderTopWidth: Theme.General.Border.Width,
     borderBottomWidth: Theme.General.Border.Width,
     borderTopColor: Theme.ProductList.Item.BorderColor,

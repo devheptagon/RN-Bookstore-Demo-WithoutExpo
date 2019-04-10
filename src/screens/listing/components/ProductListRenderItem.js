@@ -5,21 +5,23 @@ import ProductListItem from "./ProductListItem";
 import { ProductListingTypes } from "../../../constants/Enums";
 import BasketListItem from "./BasketListItem";
 
-export const ProductListRenderItem = props => {
-  const { onPress, item, index, listingType } = props;
-  switch (listingType) {
-    case ProductListingTypes.SearchResults:
-      return (
-        <TouchableHighlight onPress={onPress}>
-          <ProductListItem dataItem={item} rowIndex={index} />
-        </TouchableHighlight>
-      );
-    case ProductListingTypes.Basket:
-      return <BasketListItem dataItem={item} rowIndex={index} />;
-    default:
-      return null;
+export class ProductListRenderItem extends React.PureComponent {
+  render() {
+    const { onPress, item, index, listingType } = this.props;
+    switch (listingType) {
+      case ProductListingTypes.SearchResults:
+        return (
+          <TouchableHighlight onPress={onPress}>
+            <ProductListItem dataItem={item} rowIndex={index} />
+          </TouchableHighlight>
+        );
+      case ProductListingTypes.Basket:
+        return <BasketListItem dataItem={item} rowIndex={index} />;
+      default:
+        return null;
+    }
   }
-};
+}
 
 ProductListRenderItem.propTypes = {
   onPress: PropTypes.func,

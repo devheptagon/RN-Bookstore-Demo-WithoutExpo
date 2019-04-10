@@ -41,7 +41,10 @@ export class HomeScreen extends React.Component {
   }
 
   onScroll = async () => {
-    fetchPage(this.props.page + 1);
+    // prevent initial triggers
+    if (this.props.products.length > 0) {
+      fetchPage(this.props.page + 1);
+    }
   };
 
   onRefresh = async () => {

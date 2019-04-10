@@ -6,17 +6,19 @@ import FlexView from "../../components/FlexView";
 import { ProductListingTypes } from "../../../constants/Enums";
 import Texts from "../../../constants/Texts";
 
-export const ProductListEmptyComponent = props => {
-  return (
-    <FlexView centerAll style={styles.Wrapper}>
-      <Text>
-        {props.listingType === ProductListingTypes.Basket
-          ? Texts.EmptyBasketText
-          : Texts.EmptyListText}
-      </Text>
-    </FlexView>
-  );
-};
+export class ProductListEmptyComponent extends React.PureComponent {
+  render() {
+    return (
+      <FlexView centerAll style={styles.Wrapper}>
+        <Text>
+          {this.props.listingType === ProductListingTypes.Basket
+            ? Texts.EmptyBasketText
+            : Texts.EmptyListText}
+        </Text>
+      </FlexView>
+    );
+  }
+}
 
 const styles = StyleSheet.create({
   Wrapper: {
